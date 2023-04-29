@@ -166,6 +166,31 @@ section#about {
   margin-top: 2rem;
 }
 
+section#ajukan {
+  padding-top: 5rem;
+}
+
+#ajukan {
+  background-color: #f7f7f7;
+  padding: 5px 0;
+}
+
+
+#pengajuan {
+  background-color: #f7f7f7;
+  padding: 30px 0;
+}
+
+
+section#profile {
+  padding-top: 5rem;
+}
+
+#profile {
+  background-color: #f7f7f7;
+  padding: 50px 0;
+}
+
 /* Style untuk judul FAQ */
 .section-title {
   font-weight: 700;
@@ -225,15 +250,64 @@ section#about {
   border: 1px solid #58595b;
 }
 
-/* Style u/ Form Pengajuan */
-label{
-  display: inline-block;
-  float: left;
-  clear: left;
-  width: 250px;
-  text-align: left; /*Change to right here if you want it close to the inputs*/
+/* Style u/ Form Data Diri */
+.form {
+  margin: 20px;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgb(red, green, blue);
 }
-input {
-display: inline-block;
-float: left;
+
+.form-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid rgba(105, 52, 52, 0.342);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid rgba(105, 52, 52, 0.342);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none !important;
+  border:1px solid rgba(105, 52, 52, 0.568);
+}
+
+#ajukan h1 {
+  font-weight: 900;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #0c8cdc;
+}
+
+#pengajuan h1 {
+  font-weight: 900;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #0c8cdc;
+}
+
+#profile h1 {
+  font-weight: 900;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #0c8cdc;
+}
+
+/* Style untuk Table Profile */
+.table{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid rgba(105, 52, 52, 0.342);
+  border-radius: 4px;
+  box-sizing: border-box;
 }

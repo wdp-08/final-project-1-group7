@@ -25,6 +25,7 @@
   </head>
   <body>
   <div>
+
     <!------------------NAVBAR  ------------------------------------------------------->
     <nav class="navbar navbar-expand-md navbar-light shadow-sm fixed-top bg-body-tertiary">
       <div class="container">
@@ -49,8 +50,8 @@
             <li class="nav-item dropdown">
               <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Layanan Pinjaman</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item active" href="ajukan.html">Ajukan Credit</a></li>
-                <li><a class="dropdown-item" href="profile.html">Profile Saya</a></li>
+                <li><a class="dropdown-item" href="ajukan.html">Ajukan Credit</a></li>
+                <li><a class="dropdown-item active" href="profile.html">Profile Saya</a></li>
                 <li><a class="dropdown-item" href="profile.html#pengajuan">Status Pengajuan</a></li>
               </ul>
             </li>
@@ -69,104 +70,70 @@
     </nav>
     <!----------------------------------AKHIR NAVBAR  -------------------------------------------->
 
-    <!-------------------------------FORM Data Diri ------------------------------>
-    <section id="ajukan">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col" >
-            <h1>Data Diri</h1>
-          </div>
-        </div>
-          <form name="form">
-              <div class="form-group">
-                  <label for="name"> Nama </label>
-                  <input type="text" class="form-input" id="nama" name="nama" placeholder="Masukkan Nama Sesuai Dengan KTP">
-              </div>
-              <div class="form-group">
-                  <label for="nik">NIK</label>
-                  <input type="text" class="form-input" id="nik" name="nik" placeholder="Masukkan NIK">
-              </div>
-              <div class="form-group">
-                <label for="dom">Domisili</label>
-                <select class="form-select" id="dom" aria-label="Default select example">
-                  <option selected>Pilih Domisili</option>
-                  <option value="Jabodetabek">Jabodetabek</option>
-                  <option value="Bandung">Bandung</option>
-                  <option value="Surabaya">Surabaya</option>
-                  <option value="Semarang">Semarang</option>
-                  <option value="Yogyakarta">Yogyakarta</option>
-                  <option value="Solo">Solo</option>
-                </select>
-              </div>
-              <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="text" class="form-input" id="email" name="email" placeholder="Masukkan Email Aktif">
-              </div>
-              <div class="form-group">
-                  <label for="nohp">Nomor Handphone</label>
-                  <input type="text" class="form-input" id="nohp" name="nohp" placeholder="Masukkan No. Hp Aktif" >
-              </div>
-              <div class="form-group">
-                  <label for="link">Upload Link Dokumen</label>
-                  <input type="text" class="form-input" id="link" name="link" placeholder="Masukkan Link File Persyaratan yang Sudah dijadikan Satu" >
-              </div>
-              <br>
-              <div class="form-group">
-                  <button type="submit" onclick="enter()" class="btn btn-primary">Simpan</button>
-              </div>
-          </form>
-      </div>
-      </section>
-    <!-------------------------- Akhir Form Data Diri ------------------------->
-    
-    <!-------------------------- Pengajuan ------------------------->      
-      <section id="pengajuan">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col">
-              <h1>Pengajuan Credit</h1>
-            </div>
-          </div>
-            <div>
-              <form name="form">
-                <div class="form-group">
-                    <label for="nominal">Nominal</label>
-                    <input type="text" class="form-input" id="nominal" name="nominal" placeholder="Masukkan Nominal yang diajukan">
-                </div>
-                <div class="form-group">
-                    <label for="kepentingan">Kepentingan Pengajuan</label>
-                    <input type="text" class="form-input" id="penting" name="kepentingan" placeholder="Masukkan Kepentingan Pengajuan">
-                </div>
-                <div class="form-group">
-                  <label for="periode">Periode Peminjaman</label>
-                    <select class="form-select" id="pinjam" aria-label="Default select example">
-                      <option selected> Bulan</option>
-                      <option value="1 Bulan">1 Bulan</option>
-                      <option value="3 Bulan">3 Bulan</option>
-                      <option value="6 Bulan">6 Bulan</option>
-                      <option value="12 Bulan">12 Bulan</option>
-                      <option value="24 Bulan">24 Bulan</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                  <label for="periode">Periode Pembayaran</label>
-                  <select class="form-select" id="bayar" aria-label="Default select example">
-                    <option selected> Pembayaran </option>
-                    <option value="Bulanan">Bulanan</option>
-                    <option value="3 Bulan">3 Bulan</option>
-                    <option value="6 Bulan">6 Bulan</option>
-                    <option value="12 Bulan">12 Bulan</option>
-                  </select>
-                </div>
-                <br>
-                <div class="form-group">
-                    <button type="submit" onclick="ajukanCredit()" class="btn btn-primary">Ajukan</button>
-                </div>
-            </div>
-          </div>
-  </div>
 
-<br>
+    <!-------------------------------Profile ------------------------------>
+    <div>
+      <section id="profile">
+      <div class="container">
+              <div class="row text-center mb-3">
+                  <div class="col">
+                      <h1>Profile Saya</h1>
+                  </div>
+              </div>
+                  <table class="table" id="crudProfile">
+                  <tr>
+                      <th>Nama</th>
+                      <td id="nama"></td>
+                  </tr>
+                  <tr>
+                      <th>NIK</th>
+                      <td id="nik"></td>
+                  </tr>
+                  <tr>
+                      <th>Domisili</th>
+                      <td id="dom"></td>
+                  </tr>
+                  <tr>
+                      <th>Email</th>
+                      <td id="email"></td>
+                  </tr>
+                  <tr>
+                      <th>No HP</th>
+                      <td id="nohp"></td>
+                  </tr>
+                  <tr>
+                      <th>Link</th>
+                      <td id="link"></td>
+                  </tr>
+                  </table>
+          </div>
+    </div>
+
+
+
+    <!-------------------------- Status Pengajuan ------------------------->      
+    <section id="pengajuan">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1>Status Pengajuan Credit</h1>
+          </div>
+        <table class="table table-dark" id="crudAjukan">
+          <thead>
+              <tr>
+                  <th>Nominal</th>
+                  <th>Kepentingan Pengajuan</th>
+                  <th>Periode Peminjaman</th>
+                  <th>Periode Pembayaran</th>
+                  <th>Status Pengajuan</th>
+                  <th> </th>
+              </tr>
+          </thead>
+          <tbody id="data-pengajuan"></tbody>
+        </table>
+    </section>
+    <!-------------------------- Akhir Status Pengajuan ------------------------->
+  <br>
     <!------------------- FOOTER  ----------------------->
     <section   style="background-color: #5c5c600c;">
       <div class="container">
@@ -214,7 +181,7 @@
             </span>
             Telepon : 1500-396 <br>
 
-            Email : halo@maucash.id <br>
+            Email : halo@dzcredit.id <br>
 
             Senin - Minggu: 08.00 - 21.00 <br>
           </div>
@@ -224,6 +191,7 @@
         </div>
         </div>
     </section>
+</div>
     <!-- Load jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
@@ -238,4 +206,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   </body>
 </html>
+
 
