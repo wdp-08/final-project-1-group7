@@ -8,57 +8,11 @@ $(document).ready(function () {
   });
 });
 
-function enter() {
-  let fnama = document.getElementById("fnama").value;
-  let fnik = document.getElementById("fnik").value;
-  let femail = document.getElementById("femail").value;
-  let fnohp = document.getElementById("fnohp").value;
-  let flink = document.getElementById("flink").value;
-
-  document.getElementById("name").innerHTML = fnama;
-  document.getElementById("nik").innerHTML = fnik;
-  document.getElementById("dom").innerHTML = fdom;
-  document.getElementById("email").innerHTML = femail;
-  document.getElementById("nohp").innerHTML = fnohp;
-  document.getElementById("link").innerHTML = flink;
-}
-
 
 // // Validasi Data
 function validasiData() {
-  let nama = document.getElementById("nama").value;
-  let nik = document.getElementById("nik").value;
-  let email = document.getElementById("email").value;
-  let nohp = document.getElementById("nohp").value;
-  let link = document.getElementById("link").value;
   let nominal = document.getElementById("nominal").value;
   let penting = document.getElementById("penting").value;
-
-
-  if (nama == ""){
-    alert("Masukkan Nama");
-    return false;
-  }
-
-  if (nik == ""){
-    alert("Masukkan NIK");
-    return false;
-  }
-
-  if (email == ""){
-    alert("Masukkan Email");
-    return false;
-  }
-
-  if (nohp == ""){
-    alert("Masukkan No HP");
-    return false;
-  }
-
-  if (link == ""){
-    alert("Masukkan Link");
-    return false;
-  }
 
   if (nominal == "") {
     alert ("Masukkan Nominal");
@@ -74,20 +28,49 @@ function validasiData() {
 
 }
 
+// function simpan() { 
+//   let table = document.getElementById("crudProfile");
+//   let row = table.insertRow();
+//   let nama = document.getElementById("nama").value;
+//   let nik = document.getElementById("nik").value;
+//   let dom = document.getElementById("dom").value;
+//   let email = document.getElementById("email").value;
+//   let nohp = document.getElementById("nohp").value;
+//   let link = document.getElementById("link").value;
 
-function showProfile() {
-  let profileSaya;
-  if (localStorage.getItem("profileSaya") == null) {
-    profileSaya = [];
-  } else {
-    profileSaya = JSON.parse(localStorage.getItem("profileSaya"));
-  }
+//   row.insertCell(0).innerHTML = "Nama";
+//   row.insertCell(1).innerHTML = nama;
+//   row = table.insertRow();
 
-  let nama = document.getElementById("nama"); nama.innerHTML = nama;
-  let nik = document.getElementById("nik"); nik.innerHTML = nik;
-  let dom = document.getElementById("dom"); dom.innerHTML = dom;
+//   row.insertCell(0).innerHTML = "NIK";
+//   row.insertCell(1).innerHTML = nik;
+//   row = table.insertRow();
 
-}
+//   row.insertCell(0).innerHTML = "Domisili";
+//   row.insertCell(1).innerHTML = dom;
+//   row = table.insertRow();
+
+//   row.insertCell(0).innerHTML = "Email";
+//   row.insertCell(1).innerHTML = email;
+//   row = table.insertRow();
+
+//   row.insertCell(0).innerHTML = "No. Hp";
+//   row.insertCell(1).innerHTML = nohp;
+//   row = table.insertRow();
+
+//   row.insertCell(0).innerHTML = "Link";
+//   row.insertCell(1).innerHTML = link;
+//   row = table.insertRow();
+
+//   saveProfile(nama, nik, dom, email, nohp, link);
+// }
+
+// function saveProfile(nama, nik, dom, email, nohp, link) { 
+//   let profile = {"nama" : nama, "nik" : nik, "dom" : dom, "email" : email,
+//   "No. Hp" : nohp, "Link" : link};
+//   localStorage.setItem("crudProfile", JSON.stringify(profile));
+// }
+
 
 function showPengajuan() { 
     let pengajuanCredit;
