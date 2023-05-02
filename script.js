@@ -8,57 +8,11 @@ $(document).ready(function () {
   });
 });
 
-function enter() {
-  let fnama = document.getElementById("fnama").value;
-  let fnik = document.getElementById("fnik").value;
-  let femail = document.getElementById("femail").value;
-  let fnohp = document.getElementById("fnohp").value;
-  let flink = document.getElementById("flink").value;
-
-  document.getElementById("name").innerHTML = fnama;
-  document.getElementById("nik").innerHTML = fnik;
-  document.getElementById("dom").innerHTML = fdom;
-  document.getElementById("email").innerHTML = femail;
-  document.getElementById("nohp").innerHTML = fnohp;
-  document.getElementById("link").innerHTML = flink;
-}
-
 
 // // Validasi Data
 function validasiData() {
-  let nama = document.getElementById("nama").value;
-  let nik = document.getElementById("nik").value;
-  let email = document.getElementById("email").value;
-  let nohp = document.getElementById("nohp").value;
-  let link = document.getElementById("link").value;
   let nominal = document.getElementById("nominal").value;
   let penting = document.getElementById("penting").value;
-
-
-  if (nama == ""){
-    alert("Masukkan Nama");
-    return false;
-  }
-
-  if (nik == ""){
-    alert("Masukkan NIK");
-    return false;
-  }
-
-  if (email == ""){
-    alert("Masukkan Email");
-    return false;
-  }
-
-  if (nohp == ""){
-    alert("Masukkan No HP");
-    return false;
-  }
-
-  if (link == ""){
-    alert("Masukkan Link");
-    return false;
-  }
 
   if (nominal == "") {
     alert ("Masukkan Nominal");
@@ -75,19 +29,6 @@ function validasiData() {
 }
 
 
-function showProfile() {
-  let profileSaya;
-  if (localStorage.getItem("profileSaya") == null) {
-    profileSaya = [];
-  } else {
-    profileSaya = JSON.parse(localStorage.getItem("profileSaya"));
-  }
-
-  let nama = document.getElementById("nama"); nama.innerHTML = nama;
-  let nik = document.getElementById("nik"); nik.innerHTML = nik;
-  let dom = document.getElementById("dom"); dom.innerHTML = dom;
-
-}
 
 function showPengajuan() { 
     let pengajuanCredit;

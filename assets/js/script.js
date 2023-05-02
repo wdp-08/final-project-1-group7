@@ -6,59 +6,49 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 2000,
   });
-});
+})
 
-function enter() {
-  let fnama = document.getElementById("fnama").value;
-  let fnik = document.getElementById("fnik").value;
-  let femail = document.getElementById("femail").value;
-  let fnohp = document.getElementById("fnohp").value;
-  let flink = document.getElementById("flink").value;
 
-  document.getElementById("name").innerHTML = fnama;
-  document.getElementById("nik").innerHTML = fnik;
-  document.getElementById("dom").innerHTML = fdom;
-  document.getElementById("email").innerHTML = femail;
-  document.getElementById("nohp").innerHTML = fnohp;
-  document.getElementById("link").innerHTML = flink;
+function simpan() {
+  let table = document.getElementById("myTable");
+  let row = table.insertRow();
+  let nama = document.getElementById("nama").value;
+  let nik = document.getElementById("nik").value;
+  let domisili = document.getElementById("domisili").value;
+  let email = document.getElementById("email").value;
+  let nohp = document.getElementById("nohp").value;
+  let link = document.getElementById("link").value;
+  row.insertCell(0).innerHTML = "Nama";
+  row.insertCell(1).innerHTML = nama;
+  row = table.insertRow();
+  row.insertCell(0).innerHTML = "NIK";
+  row.insertCell(1).innerHTML = nik;
+  row = table.insertRow();
+  row.insertCell(0).innerHTML = "Domisili";
+  row.insertCell(1).innerHTML = domisili;
+  row = table.insertRow();
+  row.insertCell(0).innerHTML = "Email";
+  row.insertCell(1).innerHTML = email;
+  row = table.insertRow();
+  row.insertCell(0).innerHTML = "No Hp";
+  row.insertCell(1).innerHTML = nohp;
+  row = table.insertRow();
+  row.insertCell(0).innerHTML = "Link";
+  row.insertCell(1).innerHTML = link;
+  row = table.insertRow();
+  saveData(nama, nik, domisili, email, nohp, link);
+}
+
+function saveData(nama, nik, domisili, nohp, link) {
+  let data = {"name": nama, "nik": nik, "domisili" : domisili, "email" : email, "nohp" : nohp, "link" : link};
+  localStorage.setItem("myData", JSON.stringify(data));
 }
 
 
 // // Validasi Data
 function validasiData() {
-  let nama = document.getElementById("nama").value;
-  let nik = document.getElementById("nik").value;
-  let email = document.getElementById("email").value;
-  let nohp = document.getElementById("nohp").value;
-  let link = document.getElementById("link").value;
   let nominal = document.getElementById("nominal").value;
   let penting = document.getElementById("penting").value;
-
-
-  if (nama == ""){
-    alert("Masukkan Nama");
-    return false;
-  }
-
-  if (nik == ""){
-    alert("Masukkan NIK");
-    return false;
-  }
-
-  if (email == ""){
-    alert("Masukkan Email");
-    return false;
-  }
-
-  if (nohp == ""){
-    alert("Masukkan No HP");
-    return false;
-  }
-
-  if (link == ""){
-    alert("Masukkan Link");
-    return false;
-  }
 
   if (nominal == "") {
     alert ("Masukkan Nominal");
@@ -145,7 +135,9 @@ function ajukanCredit(){
     document.getElementById("penting").value="";
     document.getElementById("pinjam").value="";
     document.getElementById("bayar").value="";
+
   }
+  
 }
 
 function deletePengajuan(index){
