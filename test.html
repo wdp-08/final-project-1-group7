@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form to Vertical Heading Table</title>
+  <script>
+    function addRow() {
+      var table = document.getElementById("myTable");
+      var row = table.insertRow();
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var city = document.getElementById("city").value;
+      var state = document.getElementById("state").value;
+      row.insertCell(0).innerHTML = "Name";
+      row.insertCell(1).innerHTML = name;
+      row = table.insertRow();
+      row.insertCell(0).innerHTML = "Email";
+      row.insertCell(1).innerHTML = email;
+      row = table.insertRow();
+      row.insertCell(0).innerHTML = "Phone";
+      row.insertCell(1).innerHTML = phone;
+      row = table.insertRow();
+      row.insertCell(0).innerHTML = "City";
+      row.insertCell(1).innerHTML = city;
+      row = table.insertRow();
+      row.insertCell(0).innerHTML = "State";
+      row.insertCell(1).innerHTML = state;
+      saveData(name, email, phone, city, state);
+    }
+    
+    function saveData(name, email, phone, city, state) {
+      var data = {"name": name, "email": email, "phone": phone, "city": city, "state": state};
+      localStorage.setItem("myData", JSON.stringify(data));
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label>Name:</label>
+    <input type="text" id="name"><br><br>
+    <label>Email:</label>
+    <input type="email" id="email"><br><br>
+    <label>Phone:</label>
+    <input type="tel" id="phone"><br><br>
+    <label>City:</label>
+    <input type="text" id="city"><br><br>
+    <label>State:</label>
+    <input type="text" id="state"><br><br>
+    <input type="button" value="Add Data" onclick="addRow()">
+  </form>
+
+  <table id="myTable">
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </table>
+</body>
+</html>

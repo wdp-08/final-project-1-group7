@@ -28,48 +28,6 @@ function validasiData() {
 
 }
 
-// function simpan() { 
-//   let table = document.getElementById("crudProfile");
-//   let row = table.insertRow();
-//   let nama = document.getElementById("nama").value;
-//   let nik = document.getElementById("nik").value;
-//   let dom = document.getElementById("dom").value;
-//   let email = document.getElementById("email").value;
-//   let nohp = document.getElementById("nohp").value;
-//   let link = document.getElementById("link").value;
-
-//   row.insertCell(0).innerHTML = "Nama";
-//   row.insertCell(1).innerHTML = nama;
-//   row = table.insertRow();
-
-//   row.insertCell(0).innerHTML = "NIK";
-//   row.insertCell(1).innerHTML = nik;
-//   row = table.insertRow();
-
-//   row.insertCell(0).innerHTML = "Domisili";
-//   row.insertCell(1).innerHTML = dom;
-//   row = table.insertRow();
-
-//   row.insertCell(0).innerHTML = "Email";
-//   row.insertCell(1).innerHTML = email;
-//   row = table.insertRow();
-
-//   row.insertCell(0).innerHTML = "No. Hp";
-//   row.insertCell(1).innerHTML = nohp;
-//   row = table.insertRow();
-
-//   row.insertCell(0).innerHTML = "Link";
-//   row.insertCell(1).innerHTML = link;
-//   row = table.insertRow();
-
-//   saveProfile(nama, nik, dom, email, nohp, link);
-// }
-
-// function saveProfile(nama, nik, dom, email, nohp, link) { 
-//   let profile = {"nama" : nama, "nik" : nik, "dom" : dom, "email" : email,
-//   "No. Hp" : nohp, "Link" : link};
-//   localStorage.setItem("crudProfile", JSON.stringify(profile));
-// }
 
 
 function showPengajuan() { 

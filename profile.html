@@ -50,9 +50,8 @@
             <li class="nav-item dropdown">
               <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Layanan Pinjaman</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="ajukan.html">Ajukan Credit</a></li>
                 <li><a class="dropdown-item active" href="profile.html">Profile Saya</a></li>
-                <li><a class="dropdown-item" href="profile.html#pengajuan">Status Pengajuan</a></li>
+                <li><a class="dropdown-item" href="profile.html#pengajuan">Pengajuan</a></li>
               </ul>
             </li>
           </ul>
@@ -72,25 +71,92 @@
 
 
     <!-------------------------------Profile ------------------------------>
-    <div>
       <section id="profile">
       <div class="container">
-              <div class="row text-center mb-3">
-                  <div class="col">
-                      <h1>Profile Saya</h1>
-                  </div>
+        <div class="row text-center mb-3">
+          <div class="col" >
+          <h1>Profile Saya</h1>
+          </div>
+        </div>
+        <div>
+          <form>
+            <label>Name :</label>
+            <input type="text" class="form-input" id="nama"><br><br>
+            <label>NIK :</label>
+            <input type="text" class="form-input" id="nik"><br><br>
+            <label>Domisili :</label>
+            <input type="text" class="form-input" id="domisili"><br><br>
+            <label>Email :</label>
+            <input type="text" class="form-input" id="email"><br><br>
+            <label>Phone :</label>
+            <input type="text" class="form-input" id="nohp"><br><br>
+            <label>Link :</label>
+            <input type="text" class="form-input" id="link"><br><br>
+          </form>
+              <br>
+              <div class="form-group">
+                  <button type="submit" onclick="simpan()" class="btn btn-primary">Simpan</button>
               </div>
-              <div>
-                <table class="table" id="crudProfile">
-                <tr>
-                    <th>  </th>
-                    <th>  </th>
-                </tr>
-                </table>
-              </div>
+          </div>
+          <div class="col">
+            <table class="table table-dark" id="myTable">
+              <tr>
+                <th></th>
+                <th></th>
+              </tr>
+            </table>
+          </div>
       </div>
-    </div>
   </section>
+
+    <!-------------------------- Pengajuan ------------------------->      
+    <section id="pengajuan">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <h1>Pengajuan Credit</h1>
+          </div>
+        </div>
+          <div>
+            <form name="form">
+              <div class="form-group">
+                  <label for="nominal">Nominal</label>
+                  <input type="text" class="form-input" id="nominal" name="nominal" placeholder="Masukkan Nominal yang diajukan">
+              </div>
+              <div class="form-group">
+                  <label for="kepentingan">Kepentingan Pengajuan</label>
+                  <input type="text" class="form-input" id="penting" name="kepentingan" placeholder="Masukkan Kepentingan Pengajuan">
+              </div>
+              <div class="form-group">
+                <label for="periode">Periode Peminjaman</label>
+                  <select class="form-select" id="pinjam" aria-label="Default select example">
+                    <option selected> Bulan</option>
+                    <option value="1 Bulan">1 Bulan</option>
+                    <option value="3 Bulan">3 Bulan</option>
+                    <option value="6 Bulan">6 Bulan</option>
+                    <option value="12 Bulan">12 Bulan</option>
+                    <option value="24 Bulan">24 Bulan</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="periode">Periode Pembayaran</label>
+                <select class="form-select" id="bayar" aria-label="Default select example">
+                  <option selected> Pembayaran </option>
+                  <option value="Bulanan">Bulanan</option>
+                  <option value="3 Bulan">3 Bulan</option>
+                  <option value="6 Bulan">6 Bulan</option>
+                  <option value="12 Bulan">12 Bulan</option>
+                </select>
+              </div>
+              <br>
+              <div class="form-group">
+                  <button type="submit" id="submit-btn" onclick="ajukanCredit()" class="btn btn-primary">Ajukan</button>
+              </div>
+          </div>
+        </div>
+</div>
+    <!-------------------------- AKhir Pengajuan ------------------------->      
+
 
     <!-------------------------- Status Pengajuan ------------------------->      
     <section id="pengajuan">
